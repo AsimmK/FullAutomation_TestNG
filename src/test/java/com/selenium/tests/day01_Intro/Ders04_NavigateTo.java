@@ -19,6 +19,9 @@ public class Ders04_NavigateTo {
 
         driver.navigate().forward();
         Thread.sleep(2);
+
         driver.navigate().refresh();
+        Thread.sleep(2);
+        driver.close();
     }
 }

@@ -11,10 +11,15 @@ public class Ders03_NewWindowHandle {
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
+
         driver.get("http://google.com");
+
         ((JavascriptExecutor) driver).executeScript("window.open()");//yeni pencere açar
+
         String currentId = driver.getWindowHandle();
+
         Set<String> allWindows = driver.getWindowHandles();
+
         for (String id : allWindows) {
             if (id!= currentId) {
                 driver.switchTo().window(id);
@@ -22,8 +27,10 @@ public class Ders03_NewWindowHandle {
         }
         driver.get("https:youtube.com");
         driver.close();
+
         driver.switchTo().window(currentId);
         driver.get("https:youtube.com");
+
         driver.close();
 
     }
