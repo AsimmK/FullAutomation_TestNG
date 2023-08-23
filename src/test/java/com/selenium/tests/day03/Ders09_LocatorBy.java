@@ -20,9 +20,6 @@ public class Ders09_LocatorBy {
         String textOfExample2 = example2_link.getText();
         System.out.println("textOfExample2 = " + textOfExample2);
 
-
-
-
         driver.close();
     }
 }
