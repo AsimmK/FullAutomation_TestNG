@@ -16,5 +16,6 @@ public class Ders11_RelativeXpath {
         WebElement girisButonu = driver.findElement(By.xpath("//a[@class='nav-a nav-a-2 nav-progressive-attribute'][1]"));
 
         girisButonu.click();
+
     }
 }
